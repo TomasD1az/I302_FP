@@ -11,15 +11,17 @@
 - **ITE_ADD_NEIGHBORHOOD_NAME**: Nombre del barrio donde se encuentra la propiedad.
 
 ## 3. Caracteristicas estructurales:
-- **TIPOPROPIEDAD**: Tipo de propiedad (ej. departamento, casa, etc.).
 - **STotalM2**: Superficie total de la propiedad en metros cuadrados.
 - **SConstrM2**: Superficie construida de la propiedad en metros cuadrados.
 - **Dormitorios**: Cantidad de dormitorios en la propiedad.
 - **Banos**: Cantidad de baños en la propiedad.
 - **Ambientes**: Cantidad de ambientes en la propiedad.
-- **Amoblado**: Indica si la propiedad está amoblada.
 - **Antiguedad**: Antigüedad de la propiedad en años.
 - **ITE_TIPO_PROD**: Estado de la propiedad; los valores posibles son 'U' (usado), 'N' (nuevo), y 'S' (sin clasificación).
+- **Amoblado**: Indica si la propiedad está amoblada.
+
+(FUERA DE USO)
+- **TIPOPROPIEDAD**: Tipo de propiedad (ej. departamento, casa, etc.).
 
 ## 4. Caracteristicas no estructurales:
 
@@ -60,10 +62,8 @@
 - **AreaCine**: Indica si hay área de cine.
 - **LocalesComerciales**: Indica si hay locales comerciales en la propiedad.
 
-## 7. Características del anuncio:
+## 7. Características del anuncio (FUERA DE USO):
 
 - **MesListing**: Mes en que se listó la propiedad.
-
-(FUERA DE USO)
 - **SitioOrigen**: Origen del anuncio (ej. sitio web, aplicación).
 - **year**: Año en que se listó la propiedad.
