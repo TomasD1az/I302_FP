@@ -118,6 +118,7 @@ data = preprocess_antiguedad(data)
 data = preprocess_catehory_3(data)
 data = preprocess_category_4(data)
 
+data = data[data['precio_pesos_constantes'] <= 400000]
 data.drop(columns='id_grid', inplace=True)
 
 #now save this new dataframe in the data folder
