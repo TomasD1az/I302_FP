@@ -113,7 +113,7 @@ def preprocess_category_4(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def preprocess(df: pd.DataFrame) -> pd.DataFrame:
+def preprocess(df: pd.DataFrame, is_test=False) -> pd.DataFrame:
     """
     Esta función aplica todas las transformaciones necesarias al DataFrame de entrada.
     - Elimina columnas no deseadas.
@@ -130,8 +130,13 @@ def preprocess(df: pd.DataFrame) -> pd.DataFrame:
     df = preprocess_category_3(df)
     df = preprocess_category_4(df)
 
+    if is_test:
+        df.drop(columns='id_grid', inplace=True)
+        df.drop(columns='id', inplace=True)
+        df.to_csv(r'data/processed/test_preprocessed.csv', index=False)
+        return df
+
     df = df[df['precio_pesos_constantes'] <= 400000]
     df.drop(columns='id_grid', inplace=True)
-
     df.to_csv(r'data/processed/data_preprocessed.csv', index=False)
     return df
